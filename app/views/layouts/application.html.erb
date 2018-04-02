@@ -9,8 +9,10 @@
   </head>
 
   <body>
-    <%= render '/layouts/nav' %>
-    
+    <% if user_signed_in? %>
+      <%= render '/layouts/nav' %>
+    <% end %>
+
     <div class="container">
       <span class="notice"><%= notice %></span>
       <span class="alert"><%= alert %></span>
